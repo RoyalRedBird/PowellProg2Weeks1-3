@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class PlayerScript : MonoBehaviour
     Transform PlayerPosition;
     [SerializeField]float Speed = 0.001f;
     Camera cam;
+
+    [SerializeField]TextMeshProUGUI directionText;
 
     bool cubeGoingRight;
 
@@ -28,6 +31,15 @@ public class PlayerScript : MonoBehaviour
 
         Vector2 pos = PlayerPosition.position;
 
+        //Test Right
+        Vector2 screenSize = new Vector2(Screen.width, Screen.height);
+        Vector2 screenWorldSize = new Vector2();
+
+        screenWorldSize = cam.ScreenToWorldPoint(screenSize);
+
+        //Test Left
+        Vector2 screenWorldZero = cam.ScreenToWorldPoint(Vector2.zero);
+
         if (FollowMouse)
         {
 
@@ -43,20 +55,22 @@ public class PlayerScript : MonoBehaviour
             {
 
                 pos.x += Speed;
+                directionText.text = "Going: Right";
 
             }else{
 
                 pos.x -= Speed;
+                directionText.text = "Going: Left";
 
             }
 
-            if (pos.x + Speed >= 8.4) {
+            if (pos.x + Speed >= screenWorldSize.x) {
 
                 cubeGoingRight = false;
             
             }
 
-            if (pos.x + Speed <= -8.4)
+            if (pos.x + Speed <= screenWorldZero.x)
             {
 
                 cubeGoingRight = true;
