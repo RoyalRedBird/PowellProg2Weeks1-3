@@ -6,13 +6,13 @@ using TMPro;
 public class PlayerScript : MonoBehaviour
 {
 
-    Transform PlayerPosition;
-    [SerializeField]float Speed = 0.001f;
+    public Transform PlayerPosition;
+    [SerializeField] float Speed = 0.01f;
     Camera cam;
 
     [SerializeField]TextMeshProUGUI directionText;
 
-    bool cubeGoingRight;
+    public bool cubeGoingRight;
 
     [SerializeField]bool FollowMouse = true;
 
@@ -30,6 +30,7 @@ public class PlayerScript : MonoBehaviour
     {
 
         Vector2 pos = PlayerPosition.position;
+
 
         //Test Right
         Vector2 screenSize = new Vector2(Screen.width, Screen.height);
@@ -56,8 +57,10 @@ public class PlayerScript : MonoBehaviour
 
                 pos.x += Speed;
                 directionText.text = "Going: Right";
+                
 
-            }else{
+            }
+            else{
 
                 pos.x -= Speed;
                 directionText.text = "Going: Left";
@@ -79,11 +82,8 @@ public class PlayerScript : MonoBehaviour
 
             PlayerPosition.position = pos;
 
-
         }
-
-        
-        
+       
     }
 
     public void FlipPlayerDirection() {

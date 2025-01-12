@@ -671,6 +671,7 @@ GameObject:
   - component: {fileID: 976357792}
   - component: {fileID: 976357791}
   - component: {fileID: 976357793}
+  - component: {fileID: 976357794}
   m_Layer: 0
   m_Name: Box
   m_TagString: Untagged
@@ -757,9 +758,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce897c938683f2046ae6b8ffbc2d4b87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0.001
+  PlayerPosition: {fileID: 0}
+  Speed: 0.01
   directionText: {fileID: 190189434}
+  cubeGoingRight: 0
   FollowMouse: 0
+--- !u!114 &976357794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976357789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f513375ad29719047bc01e7300c16b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pScript: {fileID: 0}
+  speenSpeed: 0.5
+  pointAtMouse: 0
 --- !u!1 &1639827550
 GameObject:
   m_ObjectHideFlags: 0
