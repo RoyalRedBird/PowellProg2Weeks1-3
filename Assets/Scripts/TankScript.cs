@@ -87,12 +87,12 @@ public class TankScript : MonoBehaviour
         if (tankFacingRight)
         {
 
-            GunBarrel.transform.right = gunDirection * -1;
+            GunBarrel.transform.right = gunDirection * 1;
 
         }
         else {
 
-            GunBarrel.transform.right = gunDirection * 1;
+            GunBarrel.transform.right = gunDirection * -1;
 
         }
         
