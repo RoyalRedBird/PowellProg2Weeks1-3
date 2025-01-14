@@ -404,7 +404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GunBarrel: {fileID: 0}
-  MoveSpeed: 1
+  MoveSpeed: 0.1
 --- !u!4 &845641475
 Transform:
   m_ObjectHideFlags: 0
