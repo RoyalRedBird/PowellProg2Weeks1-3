@@ -38,13 +38,13 @@ public class RotateScript : MonoBehaviour
             if (pScript.cubeGoingRight)
             {
 
-                playerRotation.z -= 0.1f;
+                playerRotation.z -= speenSpeed;
 
             }
             else
             {
 
-                playerRotation.z += 0.1f;
+                playerRotation.z += speenSpeed;
 
             }
 
