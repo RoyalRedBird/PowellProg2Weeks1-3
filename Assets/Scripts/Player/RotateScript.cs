@@ -16,6 +16,7 @@ public class RotateScript : MonoBehaviour
     void Start()
     {
         pScript = GetComponent<PlayerScript>();
+        //Can anyone hear me?
 
     }
 
